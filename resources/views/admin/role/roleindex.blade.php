@@ -9,7 +9,7 @@
 			@if (count($roles) > 0)
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						Authors
+						Roles
 					</div>
 
 					<div class="panel-body">
@@ -27,6 +27,7 @@
 										<td>{{$roles[$i]['display_name']}}</td>
 										<td>{{$roles[$i]['description']}}</td>
 										<td>
+										@if (($roles[$i]['name'] != 'admin') && ($roles[$i]['name'] != 'member'))
 											<ul class="list-inline list-unstyled">
 												<li>
 													<a href="{{ url('admin/role/editrole/'. $roles[$i]['id'])}}" class="btn btn-xs btn-link " title="Edit the Role">
@@ -45,7 +46,7 @@
 												</li>
 												
 											</ul>
-
+										@endif
 										</td>
 									</tr>
 								@endfor
