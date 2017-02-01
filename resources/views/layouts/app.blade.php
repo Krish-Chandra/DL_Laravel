@@ -11,9 +11,9 @@
     <!-- <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.simplex.min.css')}}"/>     -->
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script> -->
-<!--     <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
- -->
+
       <script>
 
       </script>
