@@ -67,10 +67,6 @@ class RoleController extends Controller
     public function updaterole($id, Request $request)
     {
         $role = Role::findOrFail($id);
-        $this->validate($request, [
-            'role_id' => 'required|max:255',
-        ]);
-
 
         $input = $request->all();
 
