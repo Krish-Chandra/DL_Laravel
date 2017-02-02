@@ -1,8 +1,8 @@
-About Digital Library:
+#About Digital Library:
 
 An online book store app that has two parts: back end and front end.
 
-Admin Area:
+##Admin Area:
 
 Is where the book store is administered
 
@@ -65,7 +65,7 @@ Roles:
         member
             Public users of the system
 
-Front end:
+##Front end:
 
 Is the frontend of the application that will be used by members
 
