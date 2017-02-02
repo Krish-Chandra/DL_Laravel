@@ -35,7 +35,8 @@ Admin Users:
 
     Are those that administer the system
     Belong to roles that can be defined by the master admin user (the omnipotent user of the system)
-    Can carry out activities as per the access rights assigned to the roles they belong to
+    Can carry out activities as per the access rights assigned to the roles they belong to 
+        - Uses Zizaco/entrust package 
 
     The system automatically creates the folowing admin users: "admin@example.com" with the password: "password"
         The omnipotent user in the system
