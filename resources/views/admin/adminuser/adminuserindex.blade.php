@@ -27,6 +27,7 @@
 										<td>{{$adminUsers[$i]['email']}}</td>
 										<td>{{!$adminUsers[$i]['roles']->isEmpty() ? $adminUsers[$i]['roles'][0]->name : 'No role'}}</td>
 										<td>
+										@if ($adminUsers[$i]['name'] != 'The Administrator')
 											<ul class="list-inline list-unstyled">
 												<li>
 													<a href="{{ url('admin/adminuser/'. $adminUsers[$i]['id'])}}" class="btn btn-xs btn-link " title="Edit the admin user">
@@ -46,7 +47,7 @@
 												</li>
 												
 											</ul>
-
+										@endif
 										</td>
 									</tr>
 								@endfor
