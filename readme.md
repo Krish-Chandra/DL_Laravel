@@ -1,27 +1,91 @@
-# Laravel PHP Framework
+About Digital Library:
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+An online book store app that has two parts: back end and front end.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Admin Area:
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Is where the book store is administered
 
-## Official Documentation
+Admin Area Features:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+    Add/update/delete Books, Authors, Publishers, Categories, Admin Users, Admin Roles
+    View requests for books
+    Issue/return of books
 
-## Contributing
+Books:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+    Add/update/delete books
+        Currently, a book can have only one author, category, and publisher
 
-## Security Vulnerabilities
+Authors, Publishers and Categories:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+    Add/update/delete
 
-## License
+Issues:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+    View a list of books issued to the members
+    Delete an issue by flagging it returned
+
+Requests:
+
+    View a list of requests for books from members
+    Issue a book to the respective user thereby removing it from the request list
+
+Admin Users:
+
+    Are those that administer the system
+    Belong to roles that can be defined by the master admin user (the omnipotent user of the system)
+    Can carry out activities as per the access rights assigned to the roles they belong to
+
+    The system automatically creates the folowing admin users: "admin@example.com" with the password: "password"
+        The omnipotent user in the system
+        Has access to the entire system
+
+    "librarian@example.com" with the password: "password"
+        This user has restricted access rights to the system
+
+Members:
+
+    Are the public users of the system
+
+Roles:
+
+    Roles determine the activities that can be performed by a user in the system
+
+    The system comes with the following roles:
+        admin
+            Omnipotent
+            admin@example.com user belongs to this role
+
+        librarian
+            Less powerful than admin
+            Has restricted access to the backend
+            librarian@example.com user belongs to this role
+
+        member
+            Public users of the system
+
+Front end:
+
+Is the frontend of the application that will be used by members
+
+    Members can:
+        View the books catalog
+        Add books to the request cart
+        Checkout the books thereby sending a request to the backend
+            Only registered users can send request for books
+
+Installtion:
+
+    Clone the project in a web-accessible folder(e.g., htdocs in XAMPP)
+    Install the composer packages
+      composer install
+    Run the database migrations (the app uses mysql, by default)
+      php artisan migrate
+      
+    Copy the .env.example file to .env and make appropriate changes
+    
+    Browse the app
+      
+
+
