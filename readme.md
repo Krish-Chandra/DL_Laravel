@@ -81,11 +81,10 @@ Installtion:
     Clone the project in a web-accessible folder(e.g., htdocs in XAMPP)
     Install the composer packages
       composer install
-    Run the database migrations (the app uses mysql, by default)
+    Create the dl_laravel database(the app uses mysql, by default)
+    Run the database migrations 
       php artisan migrate
-      
     Copy the .env.example file to .env and make appropriate changes
-    
     Browse the app
       
 
