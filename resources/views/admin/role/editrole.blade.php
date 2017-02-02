@@ -44,7 +44,7 @@
 
 					<div class="form-group">
 						<div>
-							<button type="submit" class="btn btn-primary">Add</button>
+							<button type="submit" class="btn btn-primary">Update</button>
 							<a href="{{URL::to('/')}}/admin/role" class="btn btn-warning">Cancel</a>
 						</div>
 					</div>
