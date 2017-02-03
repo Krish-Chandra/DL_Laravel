@@ -37,7 +37,7 @@
 						@foreach($permissions as $permission)
 							<input type="checkbox" name="permissions[]" id="permission" value={{$permission->name}}> {{ucfirst($permission->name)}}
 						@endforeach
-													
+
 						</div>
 					</div>
 

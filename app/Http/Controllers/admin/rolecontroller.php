@@ -30,6 +30,8 @@ class RoleController extends Controller
             'name' => 'required|max:255',
         ]);
 
+        $input = $request->all();
+
         $role = Role::create([
             'name' => $request->name,
             'display_name' => $request->display_name,
@@ -37,15 +39,16 @@ class RoleController extends Controller
         ]);
 
 
-        $input = $request->all();
-
-        foreach ($input['permissions'] as $permission)
+        if (isset($input['permissions']))
         {
-            $perm = Permission::where('name', $permission)->first();
-
-            if ($perm)
+            foreach ($input['permissions'] as $permission)
             {
-                $role->attachPermission($perm);
+                $perm = Permission::where('name', $permission)->first();
+
+                if ($perm)
+                {
+                    $role->attachPermission($perm);
+                }
             }
         }
 
@@ -74,11 +77,14 @@ class RoleController extends Controller
 
         $role->detachPermissions($perms);
 
-        foreach ($input['permissions'] as $permission)
+        if (isset($input['permissions']))
         {
-            $perm = Permission::where('name', $permission)->first();
-            if ($perm)
-                $role->attachPermission($perm);
+            foreach ($input['permissions'] as $permission)
+            {
+                $perm = Permission::where('name', $permission)->first();
+                if ($perm)
+                    $role->attachPermission($perm);
+            }
         }
 
         return redirect('/admin/role');
