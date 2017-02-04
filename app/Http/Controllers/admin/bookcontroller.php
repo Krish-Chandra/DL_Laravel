@@ -35,7 +35,7 @@ class BookController extends Controller
             'category_id' => 'required|numeric',
             'publisher_id' => 'required|numeric',
             'isbn' => 'required|max:13',
-            'total_copies' => 'required|numeric',
+            'total_copies' => 'required|numeric|min:1|max:50',
             // 'available_copies' => 'required|numeric'
         ]);
 
@@ -73,7 +73,7 @@ class BookController extends Controller
             'category_id' => 'required|numeric',
             'publisher_id' => 'required|numeric',
             'isbn' => 'required|max:13',
-            'total_copies' => 'required|numeric',
+            'total_copies' => 'required|numeric|min:1|max:50',
         ]);
         
         $book->fill($input);

@@ -22,7 +22,7 @@
 						@for ($i = 0; $i < count($requests); $i++)
 							<tr>
 								<td>{{$requests[$i]['book']['title']}}</td>
-								<td>{{$requests[$i]['author']['authorname']}}</td>
+								<td>{{$requests[$i]['book']['author']['authorname']}}</td>
 								<td>{{$requests[$i]['book']['total_copies']}}</td>
 								<td>{{$requests[$i]['book']['available_copies']}}</td>
 								<td>{{$requests[$i]['user']->name}}</td>

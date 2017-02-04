@@ -15,7 +15,7 @@
 					{!! method_field('PATCH') !!}
 
 					<div class="form-group">
-						<label for="name" class="control-label">Role Name</label>
+						<label for="name" class="control-label">Name</label>
 						<div>
 							{{$role->name}}
 						</div>

@@ -89,9 +89,39 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'The Name field is required'
         ],
+
+        'authorname' => [
+            'required' => 'The Name field is required'
+        ],
+        'categoryname' => [
+            'required' => 'The Name field is required'
+        ],
+        'publishername' => [
+            'required' => 'The Name field is required'
+        ],
+
+        'email_id' => [
+            'required' => 'The Email ID field is required'
+        ],
+        'phone' => [
+            'required' => 'The Phone field is required'
+        ],
+        'title' => [
+            'required' => 'The Title field is required'
+        ],
+        'isbn' => [
+            'required' => 'The ISBN field is required'
+        ],
+        'total_copies' => [
+            'required' => 'Total copies of the book is required and has to be greater than 0',
+            'min' => 'Total copies of the book has to be between 1 and 50',
+            'max' => 'Total copies of the book has to be between 1 and 50',
+        ],
+
+
     ],
 
     /*
