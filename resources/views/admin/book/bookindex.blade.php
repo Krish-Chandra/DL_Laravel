@@ -29,9 +29,9 @@
 							<tr>
 								<td>{{$books[$i]['title']}}</td>
 								<td>{{$books[$i]['author']['authorname']}}</td>
-								<td>{{$books[$i]['isbn']}}</td>
 								<td>{{$books[$i]['category']['categoryname']}}</td>
 								<td>{{$books[$i]['publisher']['publishername']}}</td>
+								<td>{{$books[$i]['isbn']}}</td>
 								<td>{{$books[$i]['total_copies']}}</td>
 								<td>{{$books[$i]['available_copies']}}</td>
 								<td>

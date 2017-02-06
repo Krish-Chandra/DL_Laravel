@@ -21,9 +21,9 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="short_description" class="control-label">Short Description</label>
+						<label for="display_name" class="control-label">Display Name</label>
 						<div>
-							{{$role->short_description}}
+							{{$role->display_name}}
 						</div>
 					</div>
 					<div class="form-group">
